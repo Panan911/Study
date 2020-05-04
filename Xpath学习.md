@@ -77,6 +77,26 @@ tree=etree.HTML(html_doc)
 res = tree.xpath('//h1/text()')
 # 获取p[2]下href的链接
 res=tree.xpath('//div//p[2]/a/@href')
-print(res)
+```
+
+
+
+## 4.常见任务示例
+
+```markdown
+# 获取id为"firstHeading"的标签下span中的text
+'//h1[@id="firstHeading"]/span/text()'
+# 获取id为"toc"的div标签内的无序列表(ul)中所有的链接url。
+'//div[@id="toc"]/ul//a/@href'
+# 获取class属性包含"ltr"以及class属性包含"skin-vector"的任意元素内所有标题元素(h1)中的文本。这两个字符串可能在同一个class中，也可能在不同的class中。
+'//*[contains(@class,'ltr') and contains(@class,"skin-vector")]//h1//text()'
+# 选择class属性值为"infobox"的表格中的第一张图片的url。
+'//table[@class="infobox"]//img[1]/@src'
+# 选择class属性以"reflist"开头的div标签中所有链接的URL.
+'//div[starts-with(@class,"reflist")]//a/@href'
+# 选择子元素包含文本"References"的元素之后的div元素中所有链接的URL。
+'//*[text()="References"]/../following-sibling::div//a'
+# 获取页面中每张图片的URL。
+'//img/@src'
 ```
 
