@@ -28,3 +28,45 @@
   1. git init
   2. git add filename
   3. git commit -m "提交备注"
+
+
+
+
+
+
+
+# Git 命令大全
+
+1. 初始化仓库
+
+```markdown
+# 初始化仓库
+git init
+# 添加本地文件到stage
+git add .
+git add filename
+# 提交
+git commit -m "备注"
+# 推送到Repository
+git push
+git push -u origin master
+# 查看Git状态
+git status
+# 显示当前远程仓库地址
+git remote -v
+# 修改远程仓库地址
+git remote set-url origin git@github.com:Panan911/Study.git
+# 创建新分支
+git branch newbranch
+# 查看分支是否成功
+git branch
+# 切换到新分支
+git checkout newbranch
+# 切换到主分支
+git checkout master
+# 将新分支提交的改动合并到主分支上
+git merge newbranch
+# 删除新的分支
+git branch -D newbranch
+```
+
