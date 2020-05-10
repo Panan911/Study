@@ -45,8 +45,10 @@ git init
 # 添加本地文件到stage
 git add .
 git add filename
+git add -A (把新增、修改和删除的都加入)
 # 提交
 git commit -m "备注"
+git commit -am "版本描述" (一步完成提交)
 # 推送到Repository
 git push
 git push -u origin master
@@ -68,5 +70,14 @@ git checkout master
 git merge newbranch
 # 删除新的分支
 git branch -D newbranch
+# 拉取远程代码
+git clone git@github.com:Panan911/Study.git
+# 拉取远程指定分支下代码(-b 分支名称)
+git clone -b v2.8.1 git@github.com:Panan911/Study.git
+# 查看git配置信息
+git conifg -l
+# 配置用户名和密码
+git config --global user.name "用户名"
+git config --global user.email "密码"
 ```
 
