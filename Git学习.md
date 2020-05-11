@@ -29,6 +29,10 @@
   2. git add filename
   3. git commit -m "提交备注"
 
+- Reset 和 Checkout
+
+  ![image-20200512004823505](Git学习.assets/image-20200512004823505.png)
+
 
 
 
@@ -81,5 +85,9 @@ git config --global user.name "用户名"
 git config --global user.email "密码"
 # 恢复操作
 git reset HEAD
+git reset HEAD~ (回滚到上次版本)
+git reset --mixed HEAD~
+ - 移动HEAD的指向，将其指向上一行暂照 
+ - 将HEAD移动后指向的快照回滚到暂存区域
 ```
 
