@@ -254,7 +254,7 @@ list2.sort(key=len)
 print(list2) # ['PanAn', 'JiJie', 'PanXingYu']
 ```
 
-# 接续
+
 
 ### 二分搜索和已排序列表的维护
 
