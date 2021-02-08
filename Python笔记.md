@@ -358,6 +358,6 @@ pitchers = [('nolan','ryan'),('Roger','clemens'),('Schilling','Curt')]
 first_names,last_names = zip(*pitchers)
 
 print(first_names) # ('nolan', 'Roger', 'Schilling')
-print(last_names) # ('ryan', 'clemens', 'Curt')
+print(last_names) # ('ryan', 'clemens', 'Curt') #
 ```
 
