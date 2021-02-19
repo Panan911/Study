@@ -145,6 +145,9 @@ else :
 tup = (1, 2, 3)
 a, b, *rest = tup
 print(a, b, rest) # 1 2 [3] -- 返回的rest是一个列表
+# 也可以用_来表示不需要的变量
+tup = (1,2,3,['a','b','c'])
+
 ```
 
 ### 元组的方法
@@ -360,4 +363,26 @@ first_names,last_names = zip(*pitchers)
 print(first_names) # ('nolan', 'Roger', 'Schilling')
 print(last_names) # ('ryan', 'clemens', 'Curt') #
 ```
+
+
+
+## 异常处理:
+
+### raise
+
+> raise 语句的基本语法格式为：raise [exceptionName [(reason)]],可以阅读《[Python常见异常类型](http://c.biancheng.net/view/4593.html)》一节。
+
+```python
+class Config(object):
+    def __init__(self, config_file='config.ini'):
+        self._path = os.path.join(os.getcwd(), config_file)
+        if not os.path.exists(self._path):
+            raise FileNotFoundError("No such file: config.ini")    # 文件未发现报错信息
+        self._config = configparser.ConfigParser()
+        self._config.read(self._path, encoding='utf-8-sig')
+        self._configRaw = configparser.RawConfigParser()
+        self._configRaw.read(self._path, encoding='utf-8-sig')
+```
+
+
 
