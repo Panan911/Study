@@ -145,9 +145,18 @@ else :
 tup = (1, 2, 3)
 a, b, *rest = tup
 print(a, b, rest) # 1 2 [3] -- 返回的rest是一个列表
+<<<<<<< HEAD
 # 也可以用_来表示不需要的变量
 tup = (1,2,3,['a','b','c'])
 
+=======
+<<<<<<< HEAD
+=======
+# 也可以用_来表示不需要的变量
+tup = (1,2,3,['a','b','c'])
+
+>>>>>>> 36bc6b897e9583a314848485090c499dd5260b33
+>>>>>>> 0aa9ba8 (1)
 ```
 
 ### 元组的方法
@@ -361,6 +370,14 @@ pitchers = [('nolan','ryan'),('Roger','clemens'),('Schilling','Curt')]
 first_names,last_names = zip(*pitchers)
 
 print(first_names) # ('nolan', 'Roger', 'Schilling')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+print(last_names) # ('ryan', 'clemens', 'Curt')
+```
+
+=======
+>>>>>>> 0aa9ba8 (1)
 print(last_names) # ('ryan', 'clemens', 'Curt') #
 ```
 
@@ -386,3 +403,7 @@ class Config(object):
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 36bc6b897e9583a314848485090c499dd5260b33
+>>>>>>> 0aa9ba8 (1)
