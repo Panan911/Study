@@ -123,3 +123,14 @@ git pull --rebase origin master
 执行上面代码后可以看到本地代码库中多了README.md文件
 此时再执行语句 git push -u origin master即可完成代码上传到github
 ```
+
+
+
+```markdown
+erreo info :
+LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443	
+
+resolve :
+git config --global http.sslBackend "openssl"
+```
+
