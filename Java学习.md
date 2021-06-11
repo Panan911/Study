@@ -184,7 +184,7 @@ public class HelloWorld {
         char zifu3 = 'c';
         // 左侧是int类型，右侧是char类型，char --> int, 确实是从小到大，可以发生自动转换。
 =======
-```java
+​```java
 /*
 使用变量的时候，有一些注意事项 ：
 1.如果创建多个变量，那么变量之间的名称不可以重复。
@@ -348,23 +348,17 @@ public class Demo03DataTypeChar {
 
         char zifu3 = 'c';
         //左侧是int类型，右侧是char类型， char -- > int,确实是从小到大，可以进行自动类型转换。
->>>>>>> 7ac2082219dd3b82d82bc8363d1380ef2639f093
         int num = zifu3;
         System.out.println(num);
 
         char zifu4 = '中';
         System.out.println(zifu4 + 0); // 20013
-<<<<<<< HEAD
         /* 数字和字符的对照关系表（编码表）：
 
         ASCII码表 ： American Standard Code For Information Interchange  美国信息交换标准代码
         Unicode码表 ： 万国码。也是数字和符号的对照关系，开关 0-127部分和ascii码完全一致，但是从128开始包含有更多字符。
 
         */
-=======
-
-
->>>>>>> 7ac2082219dd3b82d82bc8363d1380ef2639f093
     }
 }
 ```
@@ -376,4 +370,3 @@ public class Demo03DataTypeChar {
 ![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F11167603671%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625933831&t=5595e0c3a50edf68fad33562e3902943)
 
 ![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F-fo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F03087bf40ad162d9ec5c507a11dfa9ec8a13cd21.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625933831&t=07c80040b969d32fc878d3e2cd1cab47)
->>>>>>> 7ac2082219dd3b82d82bc8363d1380ef2639f093
