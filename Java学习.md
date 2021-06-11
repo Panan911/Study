@@ -10,11 +10,11 @@ Java语言是美国sun公司(Stanford University Network)，在1995年推出的�
 
 ### 2.1 java虚拟机 -- JVM
 
-![image-20210530223020511](E:\Study\Java学习.assets\image-20210530223020511.png)
+![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.51wendang.com%2Fpic%2Fb1d6704dc3141d94fc46524d%2F1-445-png_6_0_0_0_0_0_0_893.25_1263.375-893-0-145-893.jpg&refer=http%3A%2F%2Fwww.51wendang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625973835&t=7bf7e74b701149e94961d93479c393df)
 
 ### 2.2 JRE和JDK
 
-![image-20210530223131404](E:\Study\Java学习.assets\image-20210530223131404.png)
+![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2018.cnblogs.com%2Fblog%2F1157088%2F201903%2F1157088-20190315132909445-1977511372.png&refer=http%3A%2F%2Fimg2018.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625973868&t=07479af3b518be626ebd4b214169e132)
 
 
 
@@ -363,10 +363,65 @@ public class Demo03DataTypeChar {
 }
 ```
 
-<<<<<<< HEAD
-=======
-### 算术运算符 四则与取模运算
+### 算术运算符 
+
+#### 四则与取模运算
 
 ![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F11167603671%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625933831&t=5595e0c3a50edf68fad33562e3902943)
 
 ![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F-fo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F03087bf40ad162d9ec5c507a11dfa9ec8a13cd21.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625933831&t=07c80040b969d32fc878d3e2cd1cab47)
+
+```java
+/*
+运算符：进行特定操作的符号。例如：+
+表达式：用运算符连起来的式子叫做表达式，例如：20 + 5，又例如：a + b
+
+四则运算：
+加：+
+减：-
+乘：*
+除：/
+
+取模（余数）（MOD）：%
+
+首先计算得到表达式的结果，然后再打印输出这个结果。
+复习一下小学一年级的除法公式：
+被除数 / 除数 = 商 + 余数
+
+对于一个整数的表达式来说，除法用的是整数，整数除以整数，结果仍然是整数，不看余数。
+只有对于整数的除法来说，取模运算符才有余数的意义。
+
+注意事项 ：
+    1. 一旦运算当中有不同类型的数据，那么结果将会是数据范围大的那种。
+*/
+
+public class Domo04Operator{
+    public static void main(String[] args){
+        //两个常量之间可以进行数学运算
+        System.out.println(20 + 30);
+
+        //两个变量之间也可以进行数学运算。
+        int a = 20;
+        int b = 5;
+        System.out.println(a-b); // 15
+
+        //变量和常量之间可以混合使用。
+        System.out.println(a * 10); //200
+
+        //除法
+        int x = 10;
+        int y = 3;
+        int result  = x / y;
+        System.out.println(result); // 3
+
+        //余数
+        int result2 = x % y;
+        System.out.println(result2); // 1
+
+        // int + double --> double + double --> double
+        double result3 = x + 2.5;
+        System.out.println(result3);  // 12.5
+    }
+}
+```
+
