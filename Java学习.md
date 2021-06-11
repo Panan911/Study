@@ -163,3 +163,37 @@ java的数据类型分为两大类：
 
    如果是整数，默认为int类型，如果一定要使用long类型，需要加上一个后缀L。推荐使用大写字母后缀。
 
+
+
+#### ASCII编码表：
+
+![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2F7D%2F5B%2FwKiom1bmjEiA83vuAAH393nmF_A536.jpg&refer=http%3A%2F%2Fs3.51cto.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625887860&t=5caabbe76128a9f9db3f4b7d82dbce3b)
+
+> 需要记住三个码 :  48 - '0' | 65 - 'A' | 97 - 'a'
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        char zifu1 = '1';
+        System.out.println(zifu1 + 0);
+
+        char zifu2 = 'A';
+        System.out.println(zifu2);
+
+        char zifu3 = 'c';
+        // 左侧是int类型，右侧是char类型，char --> int, 确实是从小到大，可以发生自动转换。
+        int num = zifu3;
+        System.out.println(num);
+
+        char zifu4 = '中';
+        System.out.println(zifu4 + 0); // 20013
+        /* 数字和字符的对照关系表（编码表）：
+
+        ASCII码表 ： American Standard Code For Information Interchange  美国信息交换标准代码
+        Unicode码表 ： 万国码。也是数字和符号的对照关系，开关 0-127部分和ascii码完全一致，但是从128开始包含有更多字符。
+
+        */
+    }
+}
+```
+
