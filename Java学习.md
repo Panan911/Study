@@ -529,5 +529,150 @@ public class Demo06Operator{
 ### 赋值运算符
 
 ```java
+/*
+赋值运算符分为：
+
+基本赋值运算符：就是一个等号“=”，代表将右侧的数据交给左侧的变量。
+
+复合赋值运算符：
+    +=      a+=1    相当于      a = a + 1
+    -=      b-=4    相当于      b = b - 4
+    *=      c*=5    相当于      c = c * 5
+    /=      d/=6    相当于      d = d / 6
+    %=      e%=7    相当于      e = e % 7
+
+注意事项 ：
+    1. 只有变量才能使用赋值运算符，常量不能进行赋值。
+    2. 复合赋值运算符其中隐含了一个强制类型转换。
+*/
+public class Demo07Operator{
+    public static void main(String[] args) {
+        int a = 10;
+        //按照公式进行翻译 ： a = a + 5
+        //a = 10 + 5
+        //a = 15,
+        //a本来就是10，现在重新赋值得到15
+        a += 5;
+        System.out.println(a);
+
+        int x = 10;
+        x %= 3;
+        System.out.println(x);
+
+        byte num = 30;
+        // num = num + 5;
+        // byte + int -- > (byte)int + int  -- > int
+        num += 5;
+        System.out.println(num);
+    }
+}
+```
+
+### 比较运算符
+
+![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.bjpowernode.com%2Fueditor%2Fphp%2Fupload%2Fimage%2F20200310%2F1583812822850443.png&refer=http%3A%2F%2Fwww.bjpowernode.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626330452&t=4986601e9f408634d855b3df0db94c68)
+
+```java
+import jdk.javadoc.internal.doclets.formats.html.SystemPropertiesWriter;
+
+/*
+比较运算符
+大于 ： >
+小于 ： <
+大于等于 :  >=
+小于等于 :   <=
+相等 ： ==
+不相等 ： !=
+
+注意事项：
+    1.比较运算符的结果一定是一个boolean值，成立就是true,不成立就是false.
+    2.如果进行多次判断，不能连着写。
+    数字当中的写法，例如 ： 1 < x < 3，程序当中不充许这样写。
+*/
+
+
+public class Demo08Operator{
+    public static void main(String[] args){
+        System.out.println(10>5);
+        int num1 = 10;
+        int num2 = 12;
+        System.out.println(num1 < num2); //true
+        System.out.println(num2 >= 100); //false
+        System.out.println(num2 <= 100); //true
+        System.out.println(num2 <= 12); //true
+        System.out.println("=========================");
+
+        System.out.println(10 == 10); //true
+        System.out.println(20 != 25); //true
+        System.out.println(20 != 20); //false
+        System.out.println("=========================");
+
+        int x = 2;
+        //System.out.println(1 < x < 3); //错误写法，编译报错，不能连着写。
+        
+    }
+}
+```
+
+### 逻辑运算符
+
+![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-a3e752665c6afc182fe34d762215b548_b.jpg&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626334748&t=1eb7ef1b0cd2a9839d984fd56c99b9ec)
+
+```java
+/* 
+与(并且)    &&  全都是true,才是true,否则就是false
+或(或者)    ||  只要有至少一个是true,就是true,全是false，才是false
+非(取反)    !   本来是true，变成false，本来是false，变成true。
+
+与"&&",或"||",具有短路效果：如果根据左边已经可以判断得到最终结果，那么右边的代码将不再执行，从而节省一定的性能。
+
+注意事项：
+    1.逻辑运算符只能用于boolean值。
+    2.与、或需要左右稳中有降自有一个boolean值，但是取反只要有唯一的一个boolean值。
+    3.与、或两种运算符，如果有多个条件，可以连续写。
+两个条件：条件A && 条件B
+多个条件：条件A && 条件B && 条件C
+
+tips:
+对于1 < x < 3的情况，应该拆分成两个部分，然后使用与运算符连接起来。
+如 : int x = 2;
+1 < x && x << 3
+*/
+
+
+public class Demo09Logic {
+    public static void main(String[] args){
+        System.out.println(true && false); //false
+
+        System.out.println(true && true); //false
+        System.out.println(3<4 && 10 > 5); //true
+        System.out.println("=========================");
+
+        System.out.println(true || false); //true
+        System.out.println(true || true); //true
+        System.out.println(false || false); //false
+        System.out.println("=========================");
+
+        System.out.println(true); //true
+        System.out.println(!true); //false
+        System.out.println("=========================");
+
+        int a = 10;
+        // false && ...  第一个条件不满足,后面就不用执行了(短路效果)
+        System.out.println(3 > 4 && ++a < 100); //false
+        System.out.println(a);
+
+        int b = 20;
+        // true || ....  第一个已经是true了，后面的就不用执行了（短路效果）
+        System.out.println(3 < 4 || ++b < 100);  // true
+        System.out.println(b); //20
+
+    }
+}
+```
+
+### 三元运算符
+
+```java
 ```
 
