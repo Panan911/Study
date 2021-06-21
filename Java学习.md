@@ -673,5 +673,145 @@ public class Demo09Logic {
 
 ### 三元运算符
 
+``` java
+/*
+一元运算符 ： 只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减--
+二元运算符 ： 需要两个数据才可以进行操作的运算符。例如 ： 加法 + 、 减法 -
+三元运算符 ： 需要三个数据才可以进行操作的运算符。
 
+格式 ： 
+数据类型 变量名称 = 条件判断 ? 表达式A : 表达式B;
+
+流程：
+首先判断条件是否成立 ：
+    如果成立为true，那么将表达式A的值赋值给左侧的变量;
+    如果不成立false，那么将表达式B的值赋值给左侧的变量;
+二者选其一。
+
+注意事项：
+1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求。
+2.三元运算符的结果必须被使用。
+*/
+
+
+public class Demo10Operator{
+    public static void main(String[] args){
+        int a = 10;
+        int b = 20;
+
+        // 数据类型 变量名称 = 条件判断 ？ 表达式A ： 表达式B ;
+        int max = a > b ? a : b; //最大值的变量
+        System.out.println(max);
+
+        System.out.println(a > b ? a : b);
+
+    }
+    
+}
+```
+
+## 第七章 方法入门
+
+### **什么是方法**
+
+> 方法 ：就是将一个功能抽取出来，把代码单独定义在一个大括号内，形成一个单独的功能。
+>
+> 当我们需要这个功能时，就可以去调用。这样即实现了代码的复用性，也解决了代码冗余的问题。
+
+```markdown
+scanner.close()，这个close就是方法。
+Java方法是语句的集合，这个集合一起执行能完成某个功能
+方法就是解决一类问题的组合体，比如：加法运算，减法运算，很多地方都要用到，把它抽出来作为一个方法，所有地方都可以调用
+方法包含于类或对象中
+方法在程序中被创建，在其他地方被引用
+```
+
+``` java
+/* 
+定义一个方法的格式：
+
+public static void 方法名称(){
+    方法体
+}
+
+方法名称的命名规则和变量一样，使用小驼峰。
+方法体：也就是大括号当中可以包含任意条语句。
+
+注意事项 :
+1.方法定义的先后顺序无所谓。
+2.方法的定义不能产生嵌套包含关系。
+3.方法定义好了之后，不会执行的。如果要想执行，一定要进行方法的调用。
+
+如何调用方法，格式：
+方法名称();
+*/
+public class Demo11Method{
+    public static void main(String[] args){
+        farmer();
+        seller();
+        cook();
+        me();
+    }
+
+    public static void me(){
+        //我
+        System.out.println("吃");
+    }
+
+    public static void cook(){
+        //厨子
+        System.out.println("洗菜");
+        System.out.println("切菜");
+        System.out.println("炒菜");
+        System.out.println("装盘");
+    }
+
+    public static void seller(){
+        //小商贩
+        System.out.println("运输到农贸市场");
+        System.out.println("抬高价格");
+        System.out.println("吆喝");
+        System.out.println("卖给厨子");
+    }
+
+    //农民伯伯
+    public static void farmer(){
+        //农民
+        System.out.println("播种");
+        System.out.println("浇水");
+        System.out.println("施肥");
+        System.out.println("除虫");
+        System.out.println("收割");
+        System.out.println("卖给小商贩");
+    }
+
+}
+```
+
+### 编译器的两点优化
+
+```java
+/* 
+对于byte/short/char三种类型来说，如果右侧赋值的数值没有超过范围，
+那么javac编译器将会自动隐含地为我们补上一个(byte)(short)(char)。
+
+1.如果没有超过左侧的范围，编译器补上强转。
+2.如果右侧超过了左侧的范围，那么直接编译器报错。
+*/
+public class Demo12Notice{
+    public static void main(String[] args){
+        //右侧确实是一个int数字，但是没有超过左侧的范围，就是正确的。
+        byte num1 = 30; //右侧没有超过左侧的范围。
+        System.out.println(num1);
+
+        //int --> char,没有超过范围.
+        //编译器将会自动补上一个隐含的(char)
+        char zifu = 65;
+        System.out.println(zifu); //A
+    }
+}
+```
+
+```java
+```
 
