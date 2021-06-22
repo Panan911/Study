@@ -839,3 +839,206 @@ public class Demo13Notice{
 }
 ```
 
+## 第八章 流程控制
+
+### if 语句
+
+``` java
+public class Demoif{
+    public static void main(String[] args) {
+        System.out.println("今天天气不错，正在压马路，突然发现一个快乐的地方：网吧");
+            int age = 16;
+            if(age >= 18){
+                System.out.println("你已年满17岁，可以进入网吧");
+                System.out.println("遇到一群猪队友，玩的不爽");
+                System.out.println("回家吃饭");
+            }
+            System.out.println("回家吃饭");
+        
+    }
+}
+```
+
+### if else 语句
+
+```java
+public class Demoif{
+    public static void main(String[] args) {
+        System.out.println("今天天气不错，正在压马路，突然发现一个快乐的地方：网吧");
+            int age = 16;
+            if(age >= 18){
+                System.out.println("你已年满17岁，可以进入网吧");
+                System.out.println("遇到一群猪队友，玩的不爽");
+                System.out.println("回家吃饭");
+            } else {
+                System.out.println("你还没有满18岁，先回去喝奶吧！");
+            }
+            System.out.println("回家吃饭");
+        
+    }
+}
+```
+
+### if ... else if ...
+
+```java
+public class Demoif{
+    public static void main(String[] args) {
+        System.out.println("今天天气不错，正在压马路，突然发现一个快乐的地方：网吧");
+            int age = -1;
+            if(age >= 18){
+                System.out.println("你已年满17岁，可以进入网吧");
+                System.out.println("遇到一群猪队友，玩的不爽");
+                System.out.println("回家吃饭");
+            } else if (age == -1) {
+                System.out.println("请输入正确的年龄！");
+            } else {
+                System.out.println("你还没有满18岁，先回去喝奶吧！");
+            }
+            System.out.println("回家吃饭");
+        
+    }
+}
+```
+
+### 使用if语句替换三元运算符
+
+```java
+/*
+题目:使用三元运算符和标准的if-else语句分别实现：取两个数字中的最大值。
+*/
+
+public class Demo06Max{
+    public static void main(String[] args) {
+        int a = 188;
+        int b = 20;
+
+        //首先使用三元运算符
+        //int max = a > b ? a : b;
+
+        //今天使用if语句:
+        int max;
+        if (a > b){
+            max = a;
+        } else {
+            max = b;
+        }
+        System.out.println("最大值:" + max);
+
+    }
+}
+```
+
+### 标准的switch语句
+
+<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.51wendang.com%2Fpic%2Fcf85d30a3c221c9ca7dc028e%2F11-810-jpg_6-1080-0-0-1080.jpg&refer=http%3A%2F%2Fwww.51wendang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626941437&t=54ab18873ceb5ac6a337d24005088e86" alt="img" style="zoom:50%;" />
+
+<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.cnitblog.com%2Fblog%2F641601%2F201412%2F042053496398292.jpg&refer=http%3A%2F%2Fimages.cnitblog.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626941667&t=64dab3ff8fc5cfb5d25482a2e4ec1fda" alt="img" style="zoom:67%;" />
+
+```java
+public class Demo07Switch{
+    public static void main(String[] args) {
+        int num = 5;
+
+        switch (num) {
+            case 1:
+                System.out.println("星期一");
+                break;
+            case 2:
+                System.out.println("星期二");
+                break;
+            case 3:
+                System.out.println("星期三");
+                break;
+            case 4:
+                System.out.println("星期四");
+                break;
+            case 5:
+                System.out.println("星期五");
+                break;  
+            case 6:
+                System.out.println("星期六");
+                break;  
+            case 7:
+                System.out.println("星期日");
+                break;   
+            default:
+                System.out.println("数据不合理！请重新输入！");
+                break;  //最后一个break可以活力，但是强烈推荐不要省略。
+        }
+    }
+}
+```
+
+### Switch的语句穿透
+
+``` java
+/*
+switch 语句使用的注意事项。
+1.多个case后面的数值不能重复。
+2.switch后面小括号中只能是下列数据类型:
+    基本数据类型:byte/short/char/int
+    引用数据类型:String/enum
+3. switch 语句格式可以很灵活。前后顺序可以顺序,而且break语句还可以省略。
+匹配哪一个case就从哪一个位置向下执行，直到遇到了break或者整体结束为止。
+*/
+
+public class DemoSwitchNotice{
+    public static void main(String[] args) {
+        int num = 2;
+
+        switch (num) {
+            case 1:
+                System.out.println("你好");
+                break;
+            case 2:
+                System.out.println("我好");
+                break;
+            case 3:
+                System.out.println("大家好");
+                break;
+            default:
+                System.out.println("你好，我好，大家好!");
+                break;
+        }
+    }
+}
+```
+
+### 循环结构_循环概述与基本组成部分
+
+```java
+For(初始化表达式➀;布尔表达式➁;步进表达式➃){
+  循环体➂;
+}
+```
+
+执行流程:
+
+- 执行顺序：➀➁➂➃ --> ➁➂➃ --> ➁➂➃ .. ➁➂➃不满足为止。
+  - ➀ 负责完成循环变量初始化。
+  - ➁ 负责判断是否满足循环条件，不满足则跳出循环。
+  - ➂ 具体执行的语句。
+  - ➃ 循环后，循环语句所涉及的变量的变化情况。
+
+#### For 循环语句
+
+```java
+/* 
+循环结构的基本组成部分，一般可以分成四部分：
+
+1.初始化语:在循环开始最初执行，而且只做唯一一次。
+2.条件判断:如果成立，则循环继续;如果不成立，则循环退出。
+3.循环体：重复要做的事情内容，若干行语句。
+4.步进语句：每次循环之后都要进行的扫尾工作，每次循环结束之后都要进行一次。
+*/
+public class DemoFor {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 100; i ++){
+            System.out.println("Dosomething!" + i);
+        }
+        System.out.println("程序停止!");
+    }
+}
+```
+
