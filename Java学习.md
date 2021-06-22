@@ -1042,3 +1042,183 @@ public class DemoFor {
 }
 ```
 
+#### While 循环语句
+
+```java
+/*
+while 循环有一个标准的格式，还有一个扩展格式。
+
+标准格式：
+while (条件判断) {
+    循环体
+}
+
+扩展格式:
+初始化语句；
+while (条件判断){
+    循环体;
+    步进语句;
+}
+
+*/
+
+public class DemoWhile{
+    public static void main(String[] args) {
+        for (int i = 1 ; i <= 10 ; i ++){
+            System.out.println("我错啦" + i);
+        }
+        System.out.println("===========================");
+        
+        int i = 1;
+        while (i <= 10) {
+            System.out.println("我错啦" + i);
+            i++;
+        }
+    }
+}
+```
+
+#### Do-While 循环语句
+
+```java
+/*
+do-while 循环的标准格式。
+do{
+    循环体
+} while (条件判断);
+
+扩展格式：
+do{
+    循环体
+    步进语句
+} while (条件判断);
+*/
+
+public class DemoDoWhile {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10 ; i ++){
+            System.out.println("知道了知道了！" + i);
+        }
+        System.out.println("==========================");
+
+        int i = 1;
+        do {
+            System.out.println("知道了知道了" + i);
+            i++;
+        } while (i <= 10);
+    }
+}
+```
+
+#### 三种循环的区别
+
+``` java
+/* 
+三种循环的区别。
+
+1. 如果条件判断从来没有满足过，那么for循环和while循环将会执行0次，但是do-while循环至少会执行一次。
+2. for循环的变量在小括号当中定义，只有循环内部才可以使用。while循环和do-while循环初妈化语句本来就在外面 ，所以出来 循环之后还可以继续使用。
+*/
+
+public class Demo13LoopDifference{
+    public static void main(String[] args) {
+        for (int i = 1 ; i < 0; i++){
+            System.out.println("Hello");
+        }
+        System.out.println("==========================");
+
+        int i = 1;
+        do{
+            System.out.println("Hello");
+            i++;
+        } while (i < 0);
+        System.out.println(i);
+    }
+}
+```
+
+#### 循环控制 Break
+
+```java
+/* 
+break 关键字的用法有常见的两种
+
+1. 可以用在switch语句中，一旦执行，整个switch语句立刻结束。
+2. 还可以在循环语句当中，一旦执行，整个循环语句立刻结束，打断循环。
+
+关于循环的选择，有一个小建议
+1. 凡是次数确定的场景多用For循环。
+*/
+ 
+public class DemoBreak{
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10 ; i++){
+
+            //如果希望从第4次开始，后续全部不要了，就要打断循环。
+            if (i == 4) {
+                break;
+            }
+            System.out.println("Hello" + i);
+        }
+    }
+}
+```
+
+#### 循环控制 Continue
+
+```java
+/*
+另一种循环控制语句是continue关键字。
+一旦执行，立刻跳过当前次循环剩余内容，马上开始下一次循环。
+*/
+public class DemoContinue{
+    public static void main(String[] args) {
+        for(int i = 1; i <= 10; i++){
+            if (i == 4) {
+                continue;
+            }
+            System.out.println(i + "层到了！");
+        }
+    }
+}
+```
+
+#### 死循环
+
+```java
+/*
+永远停不下来的循环，叫做死循环。
+死循环的标准格式：
+while(true){
+    循环体
+}
+*/
+public class DemoDeadLoop{
+    public static void main(String[] args) {
+        for(int i = 1; i <= 10;){
+            System.out.println("Hello" + i);
+        }
+
+        while(true){
+            System.out.println("i love you");
+        }
+    }
+}
+```
+
+#### 嵌套循环
+
+```java
+public class DemoLoopHourAndMinute {
+    public static void main(String[] args) {
+        for(int i = 0; i < 24 ; i++){  //外层控制小时
+            //System.out.println(i + "点");
+
+            for(int minute = 0; minute < 60; minute++){  //内层控制小时内的分钟数
+                System.out.println(i + "点" + minute + "分");
+            }
+        }
+    }
+}
+```
+
