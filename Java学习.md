@@ -1138,6 +1138,15 @@ package com.cnjee;
 /*对于功能类似的方法来说，因为参数列表不一样，却要记住那么多不同的方法名称，太麻烦
 * 方法的重载 : OverLoad (多个方法的名称一样，但是参数列表不一样);
 * 好处：只需要记住唯一一个方法名称，就可以实现类似的多个功能。
+*
+* 方法重载和下列因素有关：
+* 1.参数个数不同
+* 2.参数类型不同
+* 3.参数的多类型顺序不同
+*
+* 方法重载与下列因素无关：
+* 1.与参数的名称无关
+* 2.与方法的返回值类型无关
 * */
 
 public class DemoOverLoad {
@@ -1146,9 +1155,30 @@ public class DemoOverLoad {
         System.out.println(sum(1,2,3));
         System.out.println(sum(1,2,3,4));
     }
+    public static int sum(int a,double b){
+        System.out.println("这是方法五");
+        return (int) (a + b);
+    }
+    public static int sum(double a,int b){
+        System.out.println("这是方法六");
+        return (int) (a + b);
+    }
+    public static int sum(int x, int y){
+        System.out.println("与方法重载无关1");
+        return x + y;
+    }
+    /*这也是一种错误写法！与方法的返回值类型无关。
+    public static double sum(int a, int b){
+        return a + b + 0.0;
+    }*/
+    /*这是一种错误写法,与参数的名称无关
     public static int sum(int a, int b){
         System.out.println("这是方法一");
         return a + b;
+    }*/
+    public static int sum(double a,double b){
+        System.out.println("这是方法四");
+        return (int) (a + b);
     }
     public static int sum(int a, int b, int c){
         System.out.println("这是方法二");
@@ -1160,6 +1190,75 @@ public class DemoOverLoad {
     }
 }
 ```
+
+### 重载练习1_四种不同参数类型的方法
+
+```java
+package com.cnjee;
+/*
+* 题目要求：
+* 比较两个数据是否相等。
+* 参数类型分别为两个byte类型，两个short类型，两个int类型，两个long类型
+* 并在main方法中调用。
+* */
+public class DemoMethodOverloadSame {
+    public static void main(String[] args) {
+        byte a = 10;
+        byte b = 20;
+        System.out.println(isSame(a,b));
+
+        System.out.println(isSame((short) 20,(short) 20));
+
+        System.out.println(isSame(15,15));
+
+        System.out.println(isSame(20L,30L));
+    }
+
+    public static boolean isSame(byte a, byte b){
+        System.out.println("两个byte相比为 : ");
+        return a == b;
+    }
+    public static boolean isSame(short a, short b){
+        System.out.println("两个short相比为 : ");
+        boolean result;
+        if (a == b){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static boolean isSame(int a, int b){
+        System.out.println("两个int相比为 :");
+        boolean result = a == b ? true : false;
+        return result;
+    }
+    public static boolean isSame(long a, long b){
+        System.out.println("两个long类型相比为 : ");
+        boolean result;
+        if (a == b){
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+    }
+}
+```
+
+### 重载练习2_判断方法的正确重载
+
+```java
+public static void open(){}  //正确重载
+public static void open(int a){}　//正确重载
+static void open(int a,int b){}   //代码错误，和第8行冲突。
+public static void open(double a, int b){}　//正确重载
+public static void open(int a,double b){}　//代码错误，和第6行重载
+public void open(int i,double d){}　//代码错误，和第5行冲突
+public static void OPEN(){}　//代码正确，不会报错，但是并不是有效重载
+public static void open(int i ,int j){}　//代码错误，和第3行有冲突。
+```
+
+### 重载练习3_实现重载的println(方法)
 
 
 
