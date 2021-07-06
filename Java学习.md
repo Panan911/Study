@@ -1054,6 +1054,113 @@ public class DemoMethodSum {
 }
 ```
 
+#### 3.打印多次字符串
+
+``` java
+package com.cnjee;
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        printCount(50);  -- 参数可变
+    }
+    /*三要素：
+    返回值类型：只是进行一大堆打印操作而已，没有计算，也没有结果要告诉调用处。
+    方法名称:printCount
+    参数列表：*/
+    public static void printCount(int count) {
+        for(int i = 1; i <= count ; i++){
+            System.out.println("这是打印了第 " + i + " 次！");
+        }
+    }
+}
+```
+
+### 方法的注意事项
+
+```java
+package com.cnjee;
+/*
+* 使用事项：
+*       1.方法应该定义在类当中，但是不能在方法当中再定义方法，不能嵌套。
+*       2.方法定义的前后顺序无所谓。
+*       3.方法定义之后不会执行，如果希望执行，一定要调用;单独调用、打印调用、赋值调用。
+*       4.如果方法有返回值，那么必须写上"return"，不能没有。
+*       5.return后面的返回值数据，必须和方法的返回值类型对应起来。
+*       6.对于一个void没有返回值的方法，就不能写return后面的返回值，只能写return自己。
+*       7.对于方法当中最后一行的return可以省略不写。
+*       8.一个方法中可以有多个return语句，但是必须保证同时只有一个会被执行到,两个return不能连写。
+* */
+public class DemoMethodNotice {
+    public static void main(String[] args) {
+        System.out.println(getMax(5,5));
+    }
+
+    public static int method1(){
+        return 10;
+    }
+
+    public static void method2(){
+        return;
+        //return 10; //错误的方法，该方法没有返回值，return后面就不能写返回值。
+    }
+
+    public static void method3(){
+        System.out.println("AAA");
+        System.out.println("BBB");
+        System.out.println("CCC");
+        return;  //最后一行的return可以省略不写。
+    }
+
+    public static int getMax(int a, int b){
+        /*int max;
+        if (a > b ){
+            max = a;
+        } else {
+            max = b;
+        }
+        return max;*/
+
+        if (a > b){
+            return a;
+        } else {
+            return b;
+        }
+    }
+}
+```
+
+### 方法重载的基本使用
+
+```java
+package com.cnjee;
+
+/*对于功能类似的方法来说，因为参数列表不一样，却要记住那么多不同的方法名称，太麻烦
+* 方法的重载 : OverLoad (多个方法的名称一样，但是参数列表不一样);
+* 好处：只需要记住唯一一个方法名称，就可以实现类似的多个功能。
+* */
+
+public class DemoOverLoad {
+    public static void main(String[] args) {
+        System.out.println(sum(1,2));;
+        System.out.println(sum(1,2,3));
+        System.out.println(sum(1,2,3,4));
+    }
+    public static int sum(int a, int b){
+        System.out.println("这是方法一");
+        return a + b;
+    }
+    public static int sum(int a, int b, int c){
+        System.out.println("这是方法二");
+        return a + b + c;
+    }
+    public static int sum(int a, int b, int c, int d){
+        System.out.println("这是方法三");
+        return a + b + c + d;
+    }
+}
+```
+
 
 
 ## 第八章 流程控制
