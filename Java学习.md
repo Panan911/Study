@@ -1807,3 +1807,39 @@ public class DemoArray04 {
 
 ![image-20210707170345047](/Users/panan/Study/Java学习.assets/image-20210707170345047-5648631.png)
 
+#### 1.一个数组的内存图
+
+```java
+package com.cnjee;
+
+public class DemoArrayOne {
+    public static void main(String[] args) {
+        int[] array = new int[3]; //动态初始化
+        System.out.println(array); //打印的是内存地址
+        System.out.println(array[0]);　//0
+        System.out.println(array[1]);  //0
+        System.out.println(array[2]);  //0
+        System.out.println("================");
+
+        //改变数组当中的元素的内容：
+        array[1] = 10;
+        array[2] = 20;
+        System.out.println(array);  //此时内存地址不变
+        System.out.println(array[0]); //0
+        System.out.println(array[1]); //10
+        System.out.println(array[2]); //20
+    }
+}
+```
+
+
+
+![image-20210708105357863](/Users/panan/Study/Java学习.assets/image-20210708105357863.png)
+
+#### 2.两个数组的内存图
+
+![image-20210708163437607](/Users/panan/Study/Java学习.assets/image-20210708163437607.png)
+
+#### 3.两个引用指向同一个数组的内存图
+
+![image-20210708172631367](/Users/panan/Study/Java学习.assets/image-20210708172631367.png)
