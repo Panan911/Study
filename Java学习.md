@@ -1805,7 +1805,7 @@ public class DemoArray04 {
 
 ### 9.5　java中的内存划分
 
-![image-20210707170345047](/Users/panan/Study/Java学习.assets/image-20210707170345047-5648631.png)
+![image-20210707170345047](/Users/panan/Study/Java学习.assets/image-20210707170345047.png)
 
 #### 1.一个数组的内存图
 
