@@ -1803,7 +1803,7 @@ public class DemoArray04 {
 }
 ```
 
-### 9.5　java中的内存划分
+### 9.5 java中的内存划分
 
 ![image-20210707170345047](/Users/panan/Study/Java学习.assets/image-20210707170345047.png)
 
@@ -1843,3 +1843,87 @@ public class DemoArrayOne {
 #### 3.两个引用指向同一个数组的内存图
 
 ![image-20210708172631367](/Users/panan/Study/Java学习.assets/image-20210708172631367.png)
+
+### 9.6 数组索引越界异常
+
+```java
+package com.cnjee;
+/*
+* 数组的索引编号从0开始，一直到数组的长度－1为止
+*
+* 如果访问数组元素的时候，索引编号并不存在，那么将会发生数组索引越界异常
+* ArrayIndexOutOfBoundsException
+*
+* 原因:索引编号写错了
+* 解决:修改成为存在的正确索引编号。
+* */
+
+public class DemoArrayIndex {
+    public static void main(String[] args) {
+        int[] array = {15,25,35};
+
+        System.out.println(array[0]);
+        System.out.println(array[1]);
+        System.out.println(array[2]);
+
+        //错误　索引编号写错了
+        //System.out.println(array[2]);
+        
+    }
+}
+```
+
+### 9.7 空指针异常
+
+```java
+package com.cnjee;
+/*所有的引用类型变量，都可以赋值为一个null值，但是代表其中什么都没有。
+*
+* 数组必须进行new初始化才能使用其中的元素
+* 如果只是赋值了一个null，没有进行new创建，那么将会发生空指针异常
+*
+* NullPointerException
+*
+* 原因：忘了new
+* 解决：补上new*/
+
+public class DemoArrayNull {
+    public static void main(String[] args) {
+        int[] array = null;
+        array = new int[3];
+        System.out.println(array[0]);
+    }
+}
+```
+
+### 9.8 获取数组的长度
+
+```java
+package com.cnjee;
+
+/*
+* 数组的长度　: 数组名称.Length 将会得到一个int数字，代表数组的长度。
+*
+* 数组一旦创建，程序进行期间，长度不可改变
+* 
+* */
+
+public class DemoArrayLen {
+    public static void main(String[] args) {
+        int[] ArrayA = new int[3];
+
+        int[] ArrayB = {10,20,30};
+        int Len = ArrayB.length;
+        System.out.println(Len);
+        System.out.println("======================");
+        
+        //下面的代码看似变更了arrayC的长度，实则只是更换了arrayC的指向地址
+        int[] arrayC = new int[3];    //arrayC 指向内存A
+        System.out.println(arrayC.length);
+        arrayC = new int[5];    //arrayC 变更指向内存B
+        System.out.println(arrayC.length);
+        //　arrayC 由指向内存A变更为内存C，而其真正new出来的数组其实是不变的。
+    }
+}
+```
+
