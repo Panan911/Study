@@ -1927,3 +1927,73 @@ public class DemoArrayLen {
 }
 ```
 
+### 9.9 数组的遍历
+
+```java
+package com.cnjee;
+
+import java.sql.Array;
+
+/*
+* 遍历数组，说的就是对数组中的每一个元素逐一、挨个处理，默认的处理方式就是打印输出*/
+
+public class DemoArray2 {
+    public static void main(String[] args) {
+        int[] array = { 15, 16, 20, 31, 55 };
+
+        // 首先使用原始方式
+        System.out.println(array[0]);
+        System.out.println(array[1]);
+        System.out.println(array[2]);
+        System.out.println(array[3]);
+        System.out.println(array[4]);
+        System.out.println("====================");
+
+        // 用for循环来遍历
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+        
+    }
+}
+
+```
+
+### 9.10 求数组中的最大值
+
+```java
+package com.cnjee;
+
+public class DemoArrayMax {
+    public static void main(String[] args) {
+        int[] array = {5,15,30,20,10000};
+
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            //如果当前元素比max更大，则替换
+            if(array[i] > max){
+                max = array[i];
+            }
+        }
+        //　输出最大值
+        System.out.println("最大值 : " + max);
+
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] < min){
+                min = array[i];
+            }
+        }
+
+        //输出最小值
+        System.out.println("最小值 : " + min);
+    }
+}
+
+```
+
+### 9.11 数组元素反转
+
+```java
+```
+
