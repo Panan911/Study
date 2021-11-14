@@ -1805,7 +1805,7 @@ public class DemoArray04 {
 
 ### 9.5 java中的内存划分
 
-![image-20210707170345047](/Users/panan/Study/Java学习.assets/image-20210707170345047.png)
+![image-20210707170345047](Java学习.assets/image-20210707170345047.png)
 
 #### 1.一个数组的内存图
 
@@ -1834,15 +1834,15 @@ public class DemoArrayOne {
 
 
 
-![image-20210708105357863](/Users/panan/Study/Java学习.assets/image-20210708105357863.png)
+![image-20210708105357863](Java学习.assets/image-20210708105357863.png)
 
 #### 2.两个数组的内存图
 
-![image-20210708163437607](/Users/panan/Study/Java学习.assets/image-20210708163437607.png)
+![image-20210708163437607](Java学习.assets/image-20210708163437607.png)
 
 #### 3.两个引用指向同一个数组的内存图
 
-![image-20210708172631367](/Users/panan/Study/Java学习.assets/image-20210708172631367.png)
+![image-20210708172631367](Java学习.assets/image-20210708172631367.png)
 
 ### 9.6 数组索引越界异常
 
