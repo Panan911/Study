@@ -1995,5 +1995,29 @@ public class DemoArrayMax {
 ### 9.11 数组元素反转
 
 ```java
+package cn.cnjee;
+/*
+* 数组元素的反转：
+* 本来的样子 : [1,2,3,4]
+* 之后的样子 : [4,3,2,1]
+* 要求 ： 不能使用新数组，就用原来的数组进行反转
+* */
+
+public class DemoArrayReverse {
+    public static void main(String[] args) {
+        int[] array = {20,50,6,3,199};
+
+        for(int min = 0 , max = array.length - 1; min < max; min++,max--){
+            int temp = array[min];
+            array[min] = array[max];
+            array[max] = temp;
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+}
+
 ```
 
