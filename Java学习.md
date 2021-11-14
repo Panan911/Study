@@ -49,7 +49,7 @@ Java语言是美国sun公司(Stanford University Network)，在1995年推出的�
 
 ###  3.1 程序开发步骤说明
 
-![image-20210530225804497](Java学习.assets\image-20210530225804497.png)
+![image-20210530225804497](Java学习.assets/image-20210530225804497.png)
 
 > 用java写第一个程序"HelloWorld"
 
