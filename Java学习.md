@@ -909,7 +909,7 @@ public class DemoMethod {
 
 ### 方法调用的流程图
 
-![image-20211114191815839](E:\Study\Java学习.assets\image-20211114191815839.png)
+![image-20211114191815839](Java学习.assets/image-20211114191815839.png)
 
 ### 对比有参数和无参数
 
@@ -2021,5 +2021,5 @@ public class DemoArrayReverse {
 
 ```
 
-![image-20211114200536044](Java学习.assets/image-20211114200536044.png)
+
 
