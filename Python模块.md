@@ -28,7 +28,3 @@
    ```
 
 2. os.path.exists()
-   ```python
-   for i in range(10):
-      print(i)
-   ```
