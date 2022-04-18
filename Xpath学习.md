@@ -79,10 +79,7 @@ res = tree.xpath('//h1/text()')
 res=tree.xpath('//div//p[2]/a/@href')
 ```
 
-
-
 ## 4.常见任务示例
-
 ```markdown
 # 获取id为"firstHeading"的标签下span中的text
 '//h1[@id="firstHeading"]/span/text()'
@@ -99,4 +96,3 @@ res=tree.xpath('//div//p[2]/a/@href')
 # 获取页面中每张图片的URL。
 '//img/@src'
 ```
-

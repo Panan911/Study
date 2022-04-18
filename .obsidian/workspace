@@ -1,0 +1,99 @@
+{
+  "main": {
+    "id": "324f2a334d813887",
+    "type": "split",
+    "children": [
+      {
+        "id": "baa4542276785551",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Git学习.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e27fd98dda30d7d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "49c9094d9c822a55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5fa755af10db30b0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a0ba622f71263926",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "84ea308e7eee3355",
+    "type": "split",
+    "children": [
+      {
+        "id": "1235eb5b023cfa41",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e0c026557100697",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Git学习.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "baa4542276785551",
+  "lastOpenFiles": [
+    "Git学习.md",
+    "Freefq.md",
+    "MacBook/Mac Terminal 终端常用命令总结.md",
+    "Java学习.md",
+    "Java学习.assets/image-20210530223131404.png",
+    "Xpath学习.md"
+  ]
+}
